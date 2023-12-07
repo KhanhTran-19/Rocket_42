@@ -57,3 +57,14 @@ select department_name, position_name, count(Account.id) as number_of_employee f
 join Account on Department.id = Account.department_id
 join Position on Account.position_id = Position.id
 group by Department.id, Position.id;
+
+#Q12
+select Question.id, Question.content as question, TypeQuestion.type_name, Account.fullname as creator, Answer.content as answer from Question
+join TypeQuestion on Question.id = TypeQuestion.id
+join Account on Question.creator_id = Account.id
+join Answer on Question.id = Answer.question_id;
+
+#Q13
+select TypeQuestion.type_name as QuestionType, count(Question.id) as number_of_question from Question
+join TypeQuestion on Question.type_id = TypeQuestion.id
+group by TypeQuestion.type_name;
