@@ -112,7 +112,6 @@ public class Exercise5 {
             canBoList = new ArrayList<>();
         }
 
-        // method to add a new CanBo
         public void themMoiCanBo(CanBo canBo) {
             canBoList.add(canBo);
         }
@@ -147,7 +146,7 @@ public class Exercise5 {
             canBoList.removeAll(removeList);
         }
 
-        public static void exitProgram() {
+        public static void thoatKhoiChuongTrinh() {
             System.exit(0);
         }
     }
